@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" ng-app="ShoppingListCheckOff">
+  <head>
+    <title>Lista de compras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/general.css">
+  </head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Lista de Compras<span class="glyphicon glyphicon-shopping-cart icon" aria-hidden="true"></span></h1>
+            </div>
+        </div>
+
+    <!-- Lista de compras-->
+        <div ng-controller="ToBuyController as buyList">
+            <div class="col-md-6">
+                <div class="list">
+                   <h2>COMPRAR</h2>
+                   <hr>
+                    <div ng-if="buyList.items.length === 0">
+                        <p>Toda lista comprada!</p>
+                    </div>
+                    <table>
+                        <tr ng-repeat="item in buyList.items">
+                            <td><span class="quantity">{{item.itemQuantity}}</span> de {{item.itemName}}.</td>
+
+                            <td><button ng-click="buyList.boughtButton($index);">Comprado</button></td>
+
+                            <td><button class="btn btn-danger" ng-click="buyList.deleteButton($index);"><span class="glyphicon glyphicon-delete"></span> Apagar</button></td>
+
+                            <td><button ng-click="buyList.editButton($index);">Editar</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista dos produtos comprados-->
+        <div ng-controller="AlreadyBoughtController as boughtList">
+            <div class="col-md-6">
+                <div class="list">
+                   <h2>COMPRADO</h2>
+                   <hr>
+                    <div ng-if="boughtList.items.length === 0">
+                        <p>Nada ainda foi comprado!</p>
+                    </div>
+                    <table>
+                        <tr ng-repeat="item in boughtList.items">
+                            <td><span class="quantity">{{item.itemQuantity}}</span> de {{item.itemName}}.</td>
+                            <td><button ng-click="boughtList.returnToBuyListButton($index);">Retornar</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+            <div class="novoItem">
+                <div class="col-md-12">
+                    <h2>Adicionar ou Editar um item<span class="glyphicon glyphicon-pencil iconPencil" aria-hidden="true"></span></h2>
+                </div>
+
+                <div class="inserir" ng-controller="NewItemController as newItem">
+                    <div class="input-group">
+                        <span class="input-group-addon">Nome:</span>
+                        <input ng-model="newItem.newItemName"  type="text" class="form-control" placeholder="Digite o nome do produto" aria-describedby="basic-addon1" maxlength="25" value="">
+                     </div>
+
+                    <div class="input-group">
+                        <span name="qtdeInput" class="input-group-addon">Quantidade: </span>
+                        <input ng-model="newItem.newItemQuantity"  type="text" class="form-control" placeholder="Digite a quantidade do produto" aria-describedby="basic-addon1" maxlength="15" value="0">
+                    </div>
+
+                    <button ng-click="newItem.addButton();"  type="button" class="btn btn-primary btn-lg btn-block">INSERIR</button>
+
+                </div>
+            </div>
+
+    </div>
+
+    <script src="angular.min.js"></script>
+    
+    <script src="app.js"> </script>
+
+    <script src="//load.sheetsu.com"></script>
+
+</body>
+</html>
