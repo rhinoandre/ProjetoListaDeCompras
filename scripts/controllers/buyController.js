@@ -1,11 +1,5 @@
-angular.module('ShoppingList')
-  .controller('ToBuyController', ToBuyController);
-
-////////////////////////////////////////////////////////////////////////////
-// Buy Controller  //
-////////////////////////////////////////////////////////////////////////////
 ToBuyController.$inject = ['ShoppingListCheckOffService'];
-function ToBuyController(ShoppingListCheckOffService) {
+export default function ToBuyController(ShoppingListCheckOffService) {
 
   var buyList = this;
 

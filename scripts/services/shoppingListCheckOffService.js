@@ -1,10 +1,4 @@
-angular.module('ShoppingList')
-  .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
-
-////////////////////////////////////////////////////////////////////////////
-// Service ShoppingListCheckOffService//
-////////////////////////////////////////////////////////////////////////////
-function ShoppingListCheckOffService($rootScope) {
+export default function ShoppingListCheckOffService($rootScope) {
 
   var service = this;
 

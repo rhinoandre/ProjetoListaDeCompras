@@ -1,0 +1,24 @@
+{
+  "name": "project-lista-de-compras",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack scripts/app.js dist/bundle.js",
+    "build:prod": "webpack scripts/app.js dist/bundle.js -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhinoandre/ProjetoListaDeCompras.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhinoandre/ProjetoListaDeCompras/issues"
+  },
+  "homepage": "https://github.com/rhinoandre/ProjetoListaDeCompras#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  }
+}
