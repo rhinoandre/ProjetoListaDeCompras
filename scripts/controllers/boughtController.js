@@ -1,17 +1,17 @@
 angular.module('ShoppingList')
-.controller('AlreadyBoughtController', AlreadyBoughtController);
+  .controller('AlreadyBoughtController', AlreadyBoughtController);
 
 ////////////////////////////////////////////////////////////////////////////
 // AlreadyBought Controller  //
 ////////////////////////////////////////////////////////////////////////////
-  AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-  function AlreadyBoughtController(ShoppingListCheckOffService) {
-    var boughtList = this;
+AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
+function AlreadyBoughtController(ShoppingListCheckOffService) {
+  var boughtList = this;
 
-    boughtList.items = ShoppingListCheckOffService.getBoughtList();
+  boughtList.items = ShoppingListCheckOffService.getBoughtList();
 
-    boughtList.returnToBuyListButton = function (itemIndex) {
-      ShoppingListCheckOffService.returnSelectedItemToBuyList(itemIndex);
-    };
+  boughtList.returnToBuyListButton = function (itemIndex) {
+    ShoppingListCheckOffService.returnSelectedItemToBuyList(itemIndex);
+  };
 
-  }
+}
