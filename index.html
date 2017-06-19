@@ -4,7 +4,6 @@
     <title>Lista de compras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/general.css">
   </head>
 <body>
     <div class="container">
@@ -74,7 +73,7 @@
                         <input ng-model="newItem.newItemQuantity"  type="text" class="form-control" placeholder="Digite a quantidade do produto" aria-describedby="basic-addon1" maxlength="15" value="0">
                     </div>
 
-                    <button ng-click="newItem.addButton();"  type="button" class="btn btn-primary btn-lg btn-block">INSERIR</button>
+                    <button ng-click="newItem.addButton()"  type="button" class="btn btn-primary btn-lg btn-block">INSERIR</button>
 
                 </div>
             </div>
@@ -82,7 +81,6 @@
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-    <script src="scripts/firebase/firebaseInit.js"> </script>
 
     <script src="angular.min.js"></script>
 

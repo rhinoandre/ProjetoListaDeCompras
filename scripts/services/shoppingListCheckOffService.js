@@ -1,3 +1,5 @@
+ShoppingListCheckOffService.$inject = ['$rootScope'];
+
 export default function ShoppingListCheckOffService($rootScope) {
 
   var service = this;
@@ -15,7 +17,7 @@ export default function ShoppingListCheckOffService($rootScope) {
 
   service.getBuyList = function () {
     var databaseKeyRef = firebase.database().ref().child("buyListItems");
-    databaseKeyRef.once('value', snapshot => {
+    databaseKeyRef.once('value', function() {
       snapshot.forEach(function (childSnapshot) {
         buyListItems.push(childSnapshot.val());
       })

@@ -7,4 +7,4 @@ var config = {
     storageBucket: "lista-de-compras-7a852.appspot.com",
     messagingSenderId: "162387810086"
 };
-firebase.initializeApp(config);
+export default firebase.initializeApp(config);

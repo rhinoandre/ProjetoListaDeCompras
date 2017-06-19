@@ -17,4 +17,4 @@ export default function ToBuyController(ShoppingListCheckOffService) {
     ShoppingListCheckOffService.returnSelectedItemToNewItemInput(itemIndex);
   };
 
-}
+};

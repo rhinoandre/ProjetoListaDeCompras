@@ -23,4 +23,4 @@ export default function NewItemController(ShoppingListCheckOffService, $rootScop
     newItem.newItemQuantity = ShoppingListCheckOffService.getNewItemContent().itemQuantity;
   };
 
-}
+};

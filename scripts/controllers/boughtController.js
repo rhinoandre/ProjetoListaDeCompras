@@ -8,4 +8,4 @@ export default function AlreadyBoughtController(ShoppingListCheckOffService) {
     ShoppingListCheckOffService.returnSelectedItemToBuyList(itemIndex);
   };
 
-}
+};
