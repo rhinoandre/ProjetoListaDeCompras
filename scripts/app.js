@@ -1,4 +1,5 @@
 import '../styles/general.css';
+import angular from 'angular';
 
 import ShoppingListCheckOffService from './services/shoppingListCheckOffService'
 import AlreadyBoughtController from './controllers/boughtController'
